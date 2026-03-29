@@ -18,6 +18,6 @@ jobs:
           username: ${{ secrets.REMOTE_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/CI-CD-docker-compose-
-            git pull origin main
-            docker compose up -d --build
+              cd ~/CI-CD-docker-compose-
+              git pull origin main
+              docker compose up -d --build
