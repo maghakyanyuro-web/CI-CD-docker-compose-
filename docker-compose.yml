@@ -4,6 +4,10 @@ services:
     ports:
       - "5000:5000"
     depends_on:
-      - redis
-  redis:
+      - my-database
+  my-database:
     image: "redis:alpine"
+    volumes:
+      - redis_data:/data
+volumes:
+  redis_data:
